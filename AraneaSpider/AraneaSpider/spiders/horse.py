@@ -5,7 +5,7 @@ class HorseSpider(scrapy.Spider):
 
     def start_requests(self):
         # Defines the initial request and how to follow links
-        urls = ['https://treehouse-projects.github.io/horseland/index.html','https://treehouse-projects.github.io/horseland/mustang.html']
+        urls = ['https://treehouse-projects.github.io/horse-land/index.html','https://treehouse-projects.github.io/horseland/mustang.html']
 
         return [scrapy.Request(url=url, callback=self.parse) for url in urls]
 
