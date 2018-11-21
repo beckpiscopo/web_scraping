@@ -12,7 +12,9 @@ class HorseSpider(CrawlSpider):
                     follow=True)]
 
     def parse_horses(self, response): 
+    # parse() method processes the information scraped from the web
+
         url = response.url
-        title = response.css('title')
+        title = response.css('title::text').extract()   # extracts only the title text inside html tags
         print('Page URL: {}'.format(url))
         print('Page title: {}'.format(title))
